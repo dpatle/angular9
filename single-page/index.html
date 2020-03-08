@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <header>
+        <a href="/#" onclick="onHeaderNavClick(0);">Home</a>
+        <a href="/#" onclick="onHeaderNavClick(1);">dashboard</a>
+        <a href="/#" onclick="onHeaderNavClick(2);">Profile</a>
+    </header>
+
+    <div class="page-container">
+        <h1>This is home page</h1>
+    </div>
+
+    <script>
+        const pageContent = [
+            '<h1>This is home page</h1>',
+            '<h1>This is dashboard page</h1>',
+            '<h1>This is profile page</h1>'
+        ];
+        const pageContainer = document.getElementsByClassName('page-container')[0];
+        function onHeaderNavClick(index) {
+            pageContainer.innerHTML = pageContent[index];
+        };
+    </script>
+</body>
+
+</html>
