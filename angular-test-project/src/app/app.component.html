@@ -1,0 +1,20 @@
+<h1>this is my app component</h1>
+
+<!-- databinding : interpollation/expression -->
+<div class="page-container">
+  <h1>{{myPageConent + ' common string'}}</h1>
+</div>
+
+<button (click)="onClick($event)">Click me</button>
+<br>
+
+<input [(ngModel)]="myPageConent">
+
+<div class="circle" *ngIf="shouldShowCircle()"></div>
+
+<ul>
+  <li *ngFor="let item of fruits;">
+    <span>{{item.name}}</span>
+    <span>{{item.type}}</span>
+  </li>
+</ul>
