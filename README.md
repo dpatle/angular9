@@ -21,11 +21,13 @@
 
   - Component decorator
 
-  - Lifecycle hooks
-
   - Component communication
 
   - Input, Output and ViewChild
+
+  - Lifecycle hooks
+
+  - Encapsulation
 
 ### Session 3
 
@@ -48,6 +50,8 @@
 ### Session 4
 
   - Services
+
+  - Component communication (with unrelational components)
 
   - Services and DIInterfaces
 
