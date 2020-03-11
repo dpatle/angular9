@@ -4,14 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MailboxComponent } from './mailbox/mailbox.component';
-import { LeftNavComponent } from './mailbox/left-nav/left-nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LeftNavComponent,
-    MailboxComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

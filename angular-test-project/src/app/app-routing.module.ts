@@ -1,11 +1,44 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule, Injectable } from '@angular/core';
+import { Routes, RouterModule, CanActivate } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { MailboxComponent } from './mailbox/mailbox.component';
 
+@Injectable()
+export class MyAuthClass implements CanActivate {
+  canActivate() {
+    /**
+     * logic to authenticate user
+     */
+    let isAuthenticated: boolean = false;
+    if (Math.random() > 0.5) {
+      isAuthenticated = true;
+    }
+    return true;
+  }
+}
 
-const routes: Routes = [];
+const routes: Routes = [{
+  path: '',
+  loadChildren: () => import('./login/login-routing.module').then(mod => mod.LoginRoutingModule)
+}, {
+  path: 'login',
+  loadChildren: () => import('./login/login-routing.module').then(mod => mod.LoginRoutingModule)
+}, {
+  path: 'mailbox',
+  loadChildren: () => import('./mailbox/mailbox-routing.module').then(mod => mod.MailboxRoutingModule),
+  canActivate: [MyAuthClass]
+}
+];
+
+// {
+//   path: 'mailbox',
+//   component: MailboxComponent
+// }
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  // imports: [RouterModule.forRoot(routes, { useHash: true})],
+  exports: [RouterModule],
+  providers: [MyAuthClass]
 })
 export class AppRoutingModule { }
