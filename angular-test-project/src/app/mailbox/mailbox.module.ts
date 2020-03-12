@@ -14,6 +14,10 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
   imports: [
     FormsModule,
     MailboxRoutingModule
+  ],
+  exports: [
+    LeftNavComponent,
+    MailboxComponent
   ]
 })
 export class MailboxModule { }

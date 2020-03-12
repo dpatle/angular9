@@ -1,7 +1,5 @@
 import { NgModule, Injectable } from '@angular/core';
 import { Routes, RouterModule, CanActivate } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { MailboxComponent } from './mailbox/mailbox.component';
 
 @Injectable()
 export class MyAuthClass implements CanActivate {
