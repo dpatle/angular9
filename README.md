@@ -35,25 +35,32 @@
 
   - Router Links
 
+  - Lazy Loading
+  
   - Route guards
 
-  - Lazy Loading
+ 
 
+### Session 4
+
+  - Router Events
+
+  - Route parameters
+  
   - Directives
 
   - Dependency of service in component
 
   - Pipes
 
- 
-
-### Session 4
-
   - Services
 
   - Component communication (with unrelational components)
 
-  - Services and DIInterfaces
+ 
+
+### Session 5
+  - Services and DI Interfaces
 
   - Observables
 
@@ -63,9 +70,12 @@
 
   - Interceptors
 
+  - APP_Initializers
+
+
  
 
-### Session 5
+### Session 6
 
   - Unit test cases introduction
 
@@ -75,19 +85,15 @@
 
   - Service test cases
 
+
  
 
-### Session 6
-
+### Session 7
   - Pipe test cases
 
   - Async test cases
 
   - Linting
-
- 
-
-### Session 7
 
   - Test code coverage
 
