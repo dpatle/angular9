@@ -1,4 +1,5 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { UserService } from '../shared/user.service';
 
 @Component({
     selector: 'app-login',
@@ -7,5 +8,16 @@ import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 })
 
 export class LoginComponent {
-    
+    constructor(public userService: UserService) {
+        
+    }
+
+    onLoginClick() {
+        this.userService.userData$ = {
+            "userId":1,
+            "id":1,
+            "title":"John Papa",
+            "completed":false
+           };
+    }
 }

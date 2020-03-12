@@ -1,5 +1,7 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { LeftNavComponent } from './left-nav/left-nav.component';
+import { Router, RouterEvent, ActivationEnd } from '@angular/router';
+import { UserService } from '../shared/user.service';
 
 @Component({
     selector: 'app-mailbox',
@@ -15,6 +17,16 @@ export class MailboxComponent {
         'Inbox',
         'Sent Items'
     ];
+
+    constructor(private router: Router,
+        public userService: UserService) {
+        this.router.events.subscribe((event: ActivationEnd) => {
+            if (event.snapshot && event.snapshot.params) {
+                const paramID = event.snapshot.params;
+                // load content for paramID
+            }
+        });
+    }
 
     onSelectionChange(event) {
 

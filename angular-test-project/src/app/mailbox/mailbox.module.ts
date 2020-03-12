@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { MailboxRoutingModule } from './mailbox-routing.module';
 import { MailboxComponent } from './mailbox.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
+import { Router } from '@angular/router';
+import { UserService } from '../shared/user.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,10 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
   exports: [
     LeftNavComponent,
     MailboxComponent
+  ],
+  providers: [
+    Router,
+    UserService
   ]
 })
 export class MailboxModule { }

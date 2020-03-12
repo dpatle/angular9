@@ -25,6 +25,10 @@ const routes: Routes = [{
   path: 'mailbox',
   loadChildren: () => import('./mailbox/mailbox-routing.module').then(mod => mod.MailboxRoutingModule),
   canActivate: [MyAuthClass]
+}, {
+  path: 'mailbox/:id',
+  loadChildren: () => import('./mailbox/mailbox-routing.module').then(mod => mod.MailboxRoutingModule),
+  canActivate: [MyAuthClass]
 }
 ];
 

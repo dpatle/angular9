@@ -49,24 +49,24 @@
   
   - Directives
 
-  - Dependency of service in component
-
   - Pipes
 
   - Services
+
+  - Dependency of service in component
 
   - Component communication (with unrelational components)
 
  
 
 ### Session 5
-  - Services and DI Interfaces
-
-  - Observables
+  - Services and Different Interfaces
 
   - Promises
 
-  - Subjects, and Observables
+  - Observables
+
+  - Subjects, behaviorsubject, replaysubject
 
   - Interceptors
 
